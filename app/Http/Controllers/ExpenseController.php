@@ -53,15 +53,4 @@ class ExpenseController extends Controller
         // Redirect to the expenses index page with a success message
         return redirect()->route('expenses.index')->with('success', 'Expense added successfully');
     }
-
-    // Method to delete an expense
-    public function destroy($id)
-    {
-        // Find the expense by ID and delete it
-        $expense = Expense::findOrFail($id);
-        $expense->delete();
-
-        // Redirect to the expenses index page with a success message
-        return redirect()->route('expenses.index')->with('success', 'Expense deleted successfully');
-    }
 }

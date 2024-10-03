@@ -26,6 +26,3 @@ Route::get('/budget-goals/create', [BudgetGoalController::class, 'create'])->nam
 
 // Route to store a new budget goal, handled by the 'store' method of BudgetGoalController
 Route::post('/budget-goals', [BudgetGoalController::class, 'store'])->name('budget-goals.store');
-
-// Route to delete an expense, handled by the 'destroy' method of ExpenseController
-Route::delete('/expenses/{id}', [ExpenseController::class, 'destroy'])->name('expenses.destroy');
