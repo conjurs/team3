@@ -23,23 +23,25 @@
 
     <h2 class="text-xl">Total Expenses: ${{ $totalExpenses }}</h2>
 
+    
     <table class="min-w-full table-auto mt-4">
-        <thead>
-            <tr>
-                <th>Description</th>
-                <th>Amount</th>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Actions</th>
+        <tbody>
+            <tr class="font-bold">
+                <td>Amount</td>
+                <td>Date</td>
+                <td>Category</td>
+                <td>Description</td>
+                <td>Actions</td>
+            
             </tr>
-        </thead>
+        </tbody>
         <tbody>
             @foreach($expenses as $expense)
                 <tr>
-                    <td>{{ $expense->description }}</td>
                     <td>${{ $expense->amount }}</td>
                     <td>{{ $expense->date }}</td>
                     <td>{{ $expense->category }}</td>
+                    <td>{{ $expense->description }}</td>
                     <td>
                         <form action="{{ route('expenses.destroy', $expense->id) }}" method="POST">
                             @csrf
@@ -51,33 +53,55 @@
             @endforeach
         </tbody>
     </table>
+   
 
-    <canvas id="monthlyExpensesChart" class="mt-4"></canvas>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const monthlyExpenses = @json($monthlyExpenses->pluck('total'));
-        const months = @json($monthlyExpenses->pluck('month'));
+<canvas id="monthlyExpensesChart" class="mt-4"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const monthlyExpenses = @json($monthlyExpenses->pluck('total'));
+    const monthNumbers = @json($monthlyExpenses->pluck('month')); // Siin on numbrid 1-12
+    const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June', 
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
 
-        const ctx = document.getElementById('monthlyExpensesChart').getContext('2d');
-        const monthlyExpensesChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: months,
-                datasets: [{
-                    label: 'Monthly Expenses',
-                    data: monthlyExpenses,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+    // Muuda numbrid kuunimedeks
+    const months = monthNumbers.map(num => monthNames[num - 1]); // -1, et saada indeks
+
+    const ctx = document.getElementById('monthlyExpensesChart').getContext('2d');
+    const monthlyExpensesChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: months, // Kuunimed siin
+            datasets: [{
+                label: 'Monthly Expenses',
+                data: monthlyExpenses,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
                 }
             }
-        });
-    </script>
-@endsection
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

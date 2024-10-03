@@ -19,9 +19,12 @@
         <div class="mt-4">
             <label for="category">Category</label>
             <select name="category" id="category" class="border-gray-300 focus:ring-indigo-500" required>
-                <option value="test1">test1</option>
-                <option value="test2">test2</option>
-                <option value="test3">test3</option>
+                <option value="auto">Auto</option>
+                <option value="toit">Toit</option>
+                <option value="kodulaen">Kodulaen</option>
+                <option value="kommunaalid">Kommunaalid</option>
+                <option value="meelelahutus">Meelelahutus</option>
+                <option value="meelerahufond">Meelerahufond</option>
             </select>
         </div>
         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4">Add Expense</button>
