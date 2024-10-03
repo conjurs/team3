@@ -9,18 +9,10 @@
         </div>
     @endif
 
-    <form method="GET" action="{{ route('expenses.index') }}" class="my-4">
-        <label for="from_date">From Date</label>
-        <input type="date" name="from_date" id="from_date" class="border-gray-300 focus:ring-indigo-500">
-        
-        <label for="to_date">To Date</label>
-        <input type="date" name="to_date" id="to_date" class="border-gray-300 focus:ring-indigo-500">
-
-        <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4">Filter</button>
-    </form>
-
-    <a href="{{ route('expenses.create') }}" class="bg-green-500 text-white font-bold py-2 px-4 rounded">Add New Expense</a>
-
+<br>
+    <a href="{{ route('expenses.create') }}" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-3xl">New Expense</a>
+    <br>
+    <br>
     <h2 class="text-xl">Total Expenses: ${{ $totalExpenses }}</h2>
 
     
