@@ -19,7 +19,7 @@
         <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4">Filter</button>
     </form>
 
-    <a href="{{ route('expenses.create') }}" class="bg-blue-500 text-white font-bold py-2 px-4 rounded">Add New Expense</a>
+    <a href="{{ route('expenses.create') }}" class="bg-green-500 text-white font-bold py-2 px-4 rounded">Add New Expense</a>
 
     <h2 class="text-xl">Total Expenses: ${{ $totalExpenses }}</h2>
 
@@ -30,6 +30,7 @@
                 <th>Amount</th>
                 <th>Date</th>
                 <th>Category</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,13 @@
                     <td>${{ $expense->amount }}</td>
                     <td>{{ $expense->date }}</td>
                     <td>{{ $expense->category }}</td>
+                    <td>
+                        <form action="{{ route('expenses.destroy', $expense->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="bg-red-500 text-black font-bold py-1 px-2 rounded">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
