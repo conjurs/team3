@@ -27,6 +27,9 @@
                 <option value="meelerahufond">Meelerahufond</option>
             </select>
         </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4">Add Expense</button>
+        <div class="mt-4 flex space-x-4">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block w-40">Add Expense</button>
+            <a href="{{ route('expenses.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block w-40 text-center">Back to Expenses</a>
+        </div>
     </form>
 @endsection
