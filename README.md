@@ -2,16 +2,17 @@
 
 ## Selle projekti eesmärk:
 - Õppida kasutama AI-d.
+- AI aitaks lahendada koodi kirjutamise probleeme.
   
 ## Töövahendite loetelu:
 ### Projektis kasutatud töövahendid:
-- Ruumis olev tahvel, GitHub, Figma, VsCode, Zone.
+- Ruumis olev tahvel, GitHub, VsCode, Zone, Laravel Herd, Github Desktop, PHP.
 
 ## Valitud suhtluskanal
 - [Slack](https://slack.com/)
 
  ## 📓 Lingid projektist
-- [Töö, live](https://elevandid.ta23raamat.itmajakas.ee/index.html)
+- [Töö, live](https://team3kulud.ta23raamat.itmajakas.ee/expenses)
 
 ## Projekti kulg
 
