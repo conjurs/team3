@@ -9,12 +9,13 @@
         </div>
     @endif
 
-    <br>
+<br>
     <a href="{{ route('expenses.create') }}" class="bg-blue-500 text-white font-bold py-2 px-4">New Expense</a>
     <br>
     <br>
     <h2 class="text-xl">Total Expenses: ${{ $totalExpenses }}</h2>
 
+    
     <table class="min-w-full table-auto mt-4">
         <tbody>
             <tr class="font-bold">
