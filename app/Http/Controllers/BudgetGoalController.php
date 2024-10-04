@@ -7,31 +7,29 @@ use Illuminate\Http\Request;
 
 class BudgetGoalController extends Controller
 {
-    // Method to list all budget goals
+    // Näitab kõiki eelarve eesmärke
     public function index() {
-        // Retrieve all budget goals from the database
+        // Võtab kõik eelarve eesmärgid andmebaasist
         $goals = BudgetGoal::all();
-        // Return the 'budget_goals.index' view with the retrieved goals
+        // Tagastab 'budget_goals.index' vaate koos saadud eesmärkidega
         return view('budget_goals.index', compact('goals'));
     }
 
-    // Method to show the form to create a new budget goal
+    // Näitab lehte uue eelarve eesmärgi lisamiseks
     public function create() {
-        // Return the 'budget_goals.create' view
         return view('budget_goals.create');
     }
 
-    // Method to store a new budget goal
+    // Salvestab uue eelarve eesmärgi
     public function store(Request $request) {
-        // Validate the incoming request data
         $request->validate([
-            'description' => 'required', // Description is required
-            'goal_amount' => 'required|numeric', // Goal amount is required and must be numeric
+            'description' => 'required', // Kirjeldus on vajalik
+            'goal_amount' => 'required|numeric', // Eesmärgi summa on vajalik ja peab olema number
         ]);
 
-        // Create a new budget goal with the validated data
+        // Loob uue eelarve eesmärgi valideeritud andmete põhjal
         BudgetGoal::create($request->all());
-        // Redirect to the budget goals index page with a success message
+        // Suunab eelarve eesmärkide nimekirja lehele ja näitab edukat sõnumit
         return redirect()->route('budget-goals.index')->with('success', 'Budget goal added successfully');
     }
 }

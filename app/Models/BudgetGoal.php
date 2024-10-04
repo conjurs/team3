@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-// Define the BudgetGoal model
+// Eelarve eesmärgi mudel
 class BudgetGoal extends Model
 {
-    use HasFactory; // Use the HasFactory trait for factory support
+    use HasFactory;
 
-    // Specify which attributes can be mass-assigned
+    // maarab millised andmed saavad sisestatud olla
     protected $fillable = [
-        'description', // Description of the budget goal
-        'goal_amount', // Target amount for the budget goal
-        'current_amount', // Current amount saved towards the budget goal
+        'description', // Eesmärgi kirjeldus
+        'goal_amount', // Eesmärgi summa
+        'current_amount', // Praegune summa, mis on säästud
     ];
 }

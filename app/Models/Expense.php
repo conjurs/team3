@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-// Define the Expense model
+// Kulutuse mudel
 class Expense extends Model
 {
-    use HasFactory; // Use the HasFactory trait for factory support
+    use HasFactory;
 
-    // Specify which attributes can be mass-assigned
+    // Määrab, millised andmed saab sisestada
     protected $fillable = [
-        'description', // Description of the expense
-        'amount', // Amount of the expense
-        'date', // Date of the expense
-        'category', // Category of the expense
+        'description', // Kulutuse kirjeldus
+        'amount', // Kulutuse summa
+        'date', // Kulutuse kuupäev
+        'category', // Kulutuse kategooria
     ];
 
-    // Specify how attributes should be cast
+    // kuidas andmeid töödeldakse
     protected $casts = [
-        'date' => 'date', // Cast the 'date' attribute to a date object
+        'date' => 'date', // Muudab 'date' kuupäeva objektiks
     ];
 }

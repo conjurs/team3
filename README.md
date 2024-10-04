@@ -2,26 +2,26 @@
 
 ## Selle projekti eesmärk:
 - Õppida kasutama AI-d.
+- AI aitaks lahendada koodi kirjutamise probleeme.
   
 ## Töövahendite loetelu:
 ### Projektis kasutatud töövahendid:
-- Ruumis olev tahvel, GitHub, Figma, VsCode, Zone.
+- Ruumis olev tahvel, GitHub, VsCode, Zone, Laravel Herd, Github Desktop, PHP.
 
 ## Valitud suhtluskanal
 - [Slack](https://slack.com/)
 
  ## 📓 Lingid projektist
-- [Töö, live](https://elevandid.ta23raamat.itmajakas.ee/index.html)
+- [Töö, live](https://team3kulud.ta23raamat.itmajakas.ee/expenses)
 
 ## Projekti kulg
 
-### Esimene päev
-- Kõik tehtud töö on leitav Wiki alt " First day"
+### [Esimene päev](https://github.com/conjurs/team3/wiki/FIRST-DAY)
   
-### Teine päev
-- 
-### Kolmas päev
-- 
+### [Teine päev](https://github.com/conjurs/team3/wiki/SECOND-DAY)
+- Siin on vastatud KRITEERIUMID!
+### [Kolmas päev](https://github.com/conjurs/team3/wiki/THIRD-DAY)
+
 ## ⚡Meie tiimiliikmed:
 - Andrus Raamat , TA-23
 - Oskar Kallas , TAK-22
@@ -31,21 +31,3 @@
 - Andre Leppik , TAK-23
 - Liisa Kaju , TA-24
 - Hendrik Reinpal , TA-24
-
------------
-**TIIMI TAGASISIDE**
-
-**Küsimused:**
-1. Kuidas rakendad selles projektis õpitut järgmistes arendusprojektides?
-
-
-2. Üks pehme oskus, mida õppisin ja endas arendasin.
-
-
-3. Üks tehniline oskus, mida õppisin ja endas arendasin.
-
-★ **Andrus Raamat** ★
-1. ...
-2. ...
-3. ...
-

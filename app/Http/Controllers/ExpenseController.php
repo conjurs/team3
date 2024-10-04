@@ -7,61 +7,61 @@ use Illuminate\Http\Request;
 
 class ExpenseController extends Controller
 {
-    // Method to list all expenses
+    // Näitab kõiki kulutusi
     public function index(Request $request) {
-        // Start a query on the Expense model
+        // Alustab päringut kulutuste mudeli põhjal
         $query = Expense::query();
 
-        // If 'from_date' and 'to_date' are provided in the request, filter the expenses by date range
+        // Kui 'from_date' ja 'to_date' on antud, filtreerib kulutused kuupäeva vahemiku järgi
         if ($request->filled('from_date') && $request->filled('to_date')) {
             $query->whereBetween('date', [$request->from_date, $request->to_date]);
         }
 
-        // Get all expenses based on the query
+        // Võtab kõik kulutused päringu põhjal
         $expenses = $query->get();
-        // Calculate the total amount of expenses
+        // Arvutab kulutuste kogusumma
         $totalExpenses = $query->sum('amount');
 
-        // Get the total expenses grouped by month
+        // Võtab kokku kulutused kuude kaupa
         $monthlyExpenses = $query->selectRaw('MONTH(date) as month, SUM(amount) as total')
                                   ->groupBy('month')
                                   ->orderBy('month')
                                   ->get();
 
-        // Return the 'expenses.index' view with the retrieved data
+        // Tagastab 'expenses.index' vaate koos saadud andmetega
         return view('expenses.index', compact('expenses', 'totalExpenses', 'monthlyExpenses'));
     }
 
-    // Method to show the form to create a new expense
+    // Näitab lehte uue kulu lisamiseks
     public function create() {
-        // Return the 'expenses.create' view
+        // Tagastab 'expenses.create' vaate
         return view('expenses.create');
     }
 
-    // Method to store a new expense
+    // Salvestab uue kulu
     public function store(Request $request) {
-        // Validate the incoming request data
+        // Kontrollib, et sisendandmed oleksid õiged
         $request->validate([
-            'description' => 'required', // Description is required
-            'amount' => 'required|numeric', // Amount is required and must be numeric
-            'date' => 'required|date', // Date is required and must be a valid date
-            'category' => 'required', // Category is required
+            'description' => 'required', // Kirjeldus on vajalik
+            'amount' => 'required|numeric', // Summa on vajalik ja peab olema number
+            'date' => 'required|date', // Kuupäev on vajalik ja peab olema kehtiv kuupäev
+            'category' => 'required', // Kategooria on vajalik
         ]);
 
-        // Create a new expense with the validated data
+        // Loob uue kulu valideeritud andmete põhjal
         Expense::create($request->all());
-        // Redirect to the expenses index page with a success message
+        // Suunab kulude nimekirja lehele ja näitab edukat sõnumit
         return redirect()->route('expenses.index')->with('success', 'Expense added successfully');
     }
 
-    // Method to delete an expense
+    // Kustutab kulu
     public function destroy($id)
     {
-        // Find the expense by ID and delete it
+        // Otsib kulu ID järgi ja kustutab selle
         $expense = Expense::findOrFail($id);
         $expense->delete();
 
-        // Redirect to the expenses index page with a success message
+        // Suunab kulude nimekirja lehele ja näitab edukat sõnumit
         return redirect()->route('expenses.index')->with('success', 'Expense deleted successfully');
     }
 }
