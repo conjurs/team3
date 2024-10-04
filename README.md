@@ -16,10 +16,9 @@
 
 ## Projekti kulg
 
-### Esimene päev
-- Kõik tehtud töö on leitav Wiki alt " First day"
+### [Esimene päev] (https://github.com/conjurs/team3/wiki/FIRST-DAY)
   
-### Teine päev
+### [Teine päev] (https://github.com/conjurs/team3/wiki/SECOND-DAY)
 - 
 ### Kolmas päev
 - 
