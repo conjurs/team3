@@ -16,9 +16,9 @@
 
 ## Projekti kulg
 
-### [Esimene päev] (https://github.com/conjurs/team3/wiki/FIRST-DAY)
+### [Esimene päev](https://github.com/conjurs/team3/wiki/FIRST-DAY)
   
-### [Teine päev] (https://github.com/conjurs/team3/wiki/SECOND-DAY)
+### [Teine päev](https://github.com/conjurs/team3/wiki/SECOND-DAY)
 - 
 ### Kolmas päev
 - 
