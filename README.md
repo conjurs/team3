@@ -19,7 +19,7 @@
 ### [Esimene päev](https://github.com/conjurs/team3/wiki/FIRST-DAY)
   
 ### [Teine päev](https://github.com/conjurs/team3/wiki/SECOND-DAY)
-- Siin on vastatud KRITEERIUMID!
+- Siin on vastatud enamus asju, mis oli KRITEERIUMID all.
 ### [Kolmas päev](https://github.com/conjurs/team3/wiki/THIRD-DAY)
 
 ## ⚡Meie tiimiliikmed:
