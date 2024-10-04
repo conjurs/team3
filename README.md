@@ -19,9 +19,9 @@
 ### [Esimene päev](https://github.com/conjurs/team3/wiki/FIRST-DAY)
   
 ### [Teine päev](https://github.com/conjurs/team3/wiki/SECOND-DAY)
-- 
+
 ### [Kolmas päev](https://github.com/conjurs/team3/wiki/THIRD-DAY)
-- 
+
 ## ⚡Meie tiimiliikmed:
 - Andrus Raamat , TA-23
 - Oskar Kallas , TAK-22
