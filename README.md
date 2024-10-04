@@ -20,7 +20,7 @@
   
 ### [Teine päev](https://github.com/conjurs/team3/wiki/SECOND-DAY)
 - 
-### Kolmas päev
+### [Kolmas päev](https://github.com/conjurs/team3/wiki/THIRD-DAY)
 - 
 ## ⚡Meie tiimiliikmed:
 - Andrus Raamat , TA-23
@@ -32,20 +32,5 @@
 - Liisa Kaju , TA-24
 - Hendrik Reinpal , TA-24
 
------------
-**TIIMI TAGASISIDE**
 
-**Küsimused:**
-1. Kuidas rakendad selles projektis õpitut järgmistes arendusprojektides?
-
-
-2. Üks pehme oskus, mida õppisin ja endas arendasin.
-
-
-3. Üks tehniline oskus, mida õppisin ja endas arendasin.
-
-★ **Andrus Raamat** ★
-1. ...
-2. ...
-3. ...
 
