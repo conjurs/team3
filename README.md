@@ -25,7 +25,7 @@
 ## ⚡Meie tiimiliikmed:
 - Andrus Raamat , TA-23
 - Oskar Kallas , TAK-22
-- Axel Pärnoja , TAK-22
+- Axel , TAK-22
 - Taaniel Tiidussalu , TAK-23
 - Kaspar Truu , TAK-23
 - Andre Leppik , TAK-23
